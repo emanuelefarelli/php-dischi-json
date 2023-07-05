@@ -22,14 +22,27 @@
 <body>
 
     <div id="app">
-        <h1>
-            dischi:
-        </h1>
-        <ul>
-            <li v-for="disc in disksList">
-                {{ disc }}
-            </li>
-        </ul>
+        <header>
+            <h1>
+                Dischi!
+            </h1>
+        </header>
+        <main>
+            <ul>
+                <li v-for="disc in disksList">
+                    <img :src="disc.poster" alt="disc poster">
+                    <h2>
+                        {{ disc.title }}
+                    </h2>
+                    <p class="author">
+                        {{ disc.author }}
+                    </p>
+                    <p class="year">
+                        {{ disc.year }}
+                    </p>
+                </li>
+            </ul>
+        </main>
     </div>
 
     <script src="./script/Main.js"></script>
